@@ -55,10 +55,12 @@ const InputClub = {
     },
 
     _validateExists(field, data) {
-        const search = data.find(item => item.name === field.value);
-        if (search) {
-            window.alert('Klub sudah terdaftar.');
-            return false;
+        if (data) {
+            const search = data.find(item => item.name === field.value);
+            if (search) {
+                window.alert('Klub sudah terdaftar.');
+                return false;
+            }
         }
         return true;
     },
