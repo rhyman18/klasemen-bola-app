@@ -14,6 +14,34 @@ const createInputScoreSingle = () => `
 `;
 
 const createInputScoreMultiple = () => `
+<form method="post">
+    <div id="multiple-field">
+        <div class="flex gap-5">
+            <input type="text" name="clubName1" placeholder="Nama club 1" class="p-2 rounded-lg text-gray-700 w-32" autofocus>
+            <div class="flex items-center">-</div>
+            <input type="text" name="clubName2" placeholder="Nama club 2" class="p-2 rounded-lg text-gray-700 w-32">
+            <div></div>
+            <input type="text" name="clubScore1" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+            <div class="flex items-center">-</div>
+            <input type="text" name="clubScore2" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+        </div>
+    </div>
+    <input id="count-multiple" type="hidden" name="count" value="1">
+    <button id="add-multiple" type="button" class="mt-9 me-3 py-2 px-9 bg-blue-500 hover:bg-blue-700 text-blue-200 rounded-lg">Tambah</button>
+    <button type="submit" class="mt-9 ms-3 py-2 px-9 bg-blue-500 hover:bg-blue-700 text-blue-200 rounded-lg">Simpan</button>
+</form>
 `;
 
-export { createInputScoreSingle, createInputScoreMultiple };
+const generateMultipleField = (i) => `
+<div class="flex gap-5">
+    <input type="text" name="clubName${i}" placeholder="Nama club 1" class="p-2 rounded-lg text-gray-700 w-32">
+    <div class="flex items-center">-</div>
+    <input type="text" name="clubName${i}" placeholder="Nama club 2" class="p-2 rounded-lg text-gray-700 w-32">
+    <div></div>
+    <input type="text" name="clubScore${i}" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+    <div class="flex items-center">-</div>
+    <input type="text" name="clubScore${i}" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+</div>
+`;
+
+export { createInputScoreSingle, createInputScoreMultiple, generateMultipleField };
