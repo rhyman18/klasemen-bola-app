@@ -1,4 +1,5 @@
 import InputSingleScore from '../utils/inputSingleScore.js';
+import InputMultipleScore from '../utils/inputMultipleScore.js';
 import {
     createInputScoreSingle,
     createInputScoreMultiple,
@@ -50,6 +51,7 @@ const ViewInputScore = {
     _renderInputMultiple(element) {
         element.innerHTML = createInputScoreMultiple();
         this._eventFieldGenerator();
+        this._eventInputMultiple();
     },
 
     _eventInputSingle() {
@@ -63,16 +65,16 @@ const ViewInputScore = {
     },
 
     _eventFieldGenerator() {
+        let count = 1;
         document.querySelector('#add-multiple').addEventListener('click', () => {
-            const countElement = document.querySelector('#count-multiple');
-            let count = Number(countElement.value);
             count++;
-
-            document.querySelector('#multiple-field').innerHTML += generateMultipleField(count);
-
-            countElement.value = count;
+            generateMultipleField(document.querySelector('#multiple-field'), count);
         });
     },
+
+    _eventInputMultiple() {
+        InputMultipleScore.init(document.querySelector('#submit-multiple'));
+    }
 };
 
 export default ViewInputScore;

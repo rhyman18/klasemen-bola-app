@@ -36,7 +36,7 @@ const InputSingleScore = {
 
     _validate() {
         const numberCase = /[0-9]/;
-        if (this._club1.value === this._club2.value) {
+        if (this._club1.value.toLowerCase() === this._club2.value.toLowerCase()) {
             window.alert('Klub 1 dan 2 tidak mungkin sama.');
             return false;
         }
@@ -49,7 +49,7 @@ const InputSingleScore = {
 
     _validateClub(field, data) {
         if (data) {
-            const search = data.find(item => item.name === field.value);
+            const search = data.find(item => item.name === field.value.toLowerCase());
             if (!search) {
                 window.alert(`Klub ${field.value} belum terdaftar.`)
                 return false;

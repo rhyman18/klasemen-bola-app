@@ -55,7 +55,7 @@ const InputClub = {
 
     _validateExists(field, data) {
         if (data) {
-            const search = data.find(item => item.name === field.value);
+            const search = data.find(item => item.name === field.value.toLowerCase());
             if (search) {
                 window.alert('Klub sudah terdaftar.');
                 return false;
