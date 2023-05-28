@@ -15,15 +15,15 @@ const createInputScoreSingle = () => `
 
 const createInputScoreMultiple = () => `
 <form method="post">
-    <div id="multiple-field">
+    <div id="multiple-field" class="flex flex-col gap-3">
         <div class="flex gap-5">
-            <input type="text" name="clubName1" placeholder="Nama club 1" class="p-2 rounded-lg text-gray-700 w-32" autofocus>
+            <input type="text" name="clubName1" placeholder="Nama club 1" class="p-2 rounded-lg text-gray-700 w-32 text-center" autofocus>
             <div class="flex items-center">-</div>
-            <input type="text" name="clubName2" placeholder="Nama club 2" class="p-2 rounded-lg text-gray-700 w-32">
+            <input type="text" name="clubName2" placeholder="Nama club 2" class="p-2 rounded-lg text-gray-700 w-32 text-center">
             <div></div>
-            <input type="text" name="clubScore1" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+            <input type="text" name="clubScore1" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32 text-center">
             <div class="flex items-center">-</div>
-            <input type="text" name="clubScore2" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+            <input type="text" name="clubScore2" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32 text-center">
         </div>
     </div>
     <input id="count-multiple" type="hidden" name="count" value="1">
@@ -34,13 +34,13 @@ const createInputScoreMultiple = () => `
 
 const generateMultipleField = (i) => `
 <div class="flex gap-5">
-    <input type="text" name="clubName${i}" placeholder="Nama club 1" class="p-2 rounded-lg text-gray-700 w-32">
+    <input type="text" name="clubName${i}" placeholder="Nama club 1" class="p-2 rounded-lg text-gray-700 w-32 text-center">
     <div class="flex items-center">-</div>
-    <input type="text" name="clubName${i}" placeholder="Nama club 2" class="p-2 rounded-lg text-gray-700 w-32">
+    <input type="text" name="clubName${i}" placeholder="Nama club 2" class="p-2 rounded-lg text-gray-700 w-32 text-center">
     <div></div>
-    <input type="text" name="clubScore${i}" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+    <input type="text" name="clubScore${i}" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32 text-center">
     <div class="flex items-center">-</div>
-    <input type="text" name="clubScore${i}" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32">
+    <input type="text" name="clubScore${i}" placeholder="Hasil score" class="p-2 rounded-lg text-gray-700 w-32 text-center">
 </div>
 `;
 
