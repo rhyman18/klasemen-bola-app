@@ -1,3 +1,5 @@
+import { createInputScoreSingle, createInputScoreMultiple } from '../components/componentInputScore.js';
+
 const ViewInputScore = {
     initRender() {
         return `
@@ -7,7 +9,7 @@ const ViewInputScore = {
                 <div class="flex flex-wrap text-center m-9 text-lg font-medium text-blue-200">
                     <a id="score-single" class="basis-1/2 py-2 bg-blue-700">Single</a>
                     <a id="score-multiple" class="basis-1/2 py-2 hover:bg-blue-900 cursor-pointer">Multiple</a>
-                    <div id="input-score" class="mt-9 basis-full flex flex-col gap-2"></div>
+                    <div id="input-score" class="py-9 px-6 basis-full border-2 bg-blue-600 border-blue-700"></div>
                 </div>
                 <a href="index.html" class="block my-6 text-center text-lg text-blue-200 hover:text-blue-300">Kembali ke laman utama</a>
             </div>
@@ -20,20 +22,31 @@ const ViewInputScore = {
         const navSingle = document.querySelector('#score-single');
         const navMultiple = document.querySelector('#score-multiple');
 
-        content.innerHTML = 'Text default';
+        this._renderInputSingle(content);
 
         navMultiple.addEventListener('click', () => {
             navMultiple.className = 'basis-1/2 py-2 bg-blue-700';
             navSingle.className = 'basis-1/2 py-2 hover:bg-blue-900 cursor-pointer';
-            content.innerHTML = 'Text multiple';
+            this._renderInputMultiple(content);
         });
 
         navSingle.addEventListener('click', () => {
             navSingle.className = 'basis-1/2 py-2 bg-blue-700';
             navMultiple.className = 'basis-1/2 py-2 hover:bg-blue-900 cursor-pointer';
-            content.innerHTML = 'Text single';
+            this._renderInputSingle(content);
         });
-    }
+    },
+
+    _renderInputSingle(element) {
+        element.innerHTML = createInputScoreSingle();
+        this._eventInputSingle();
+    },
+
+    _renderInputMultiple(element) {
+        element.innerHTML = createInputScoreMultiple();
+    },
+
+    _eventInputSingle() {},
 };
 
 export default ViewInputScore;
