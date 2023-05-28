@@ -19,6 +19,13 @@ const DataClub = {
 
     _load() {
         return localStorage.getItem('club')
+    },
+
+    update({club1, club2, dataClub1, dataClub2}) {
+        const dataClub = JSON.parse(this._load());
+        dataClub[club1] = dataClub1;
+        dataClub[club2] = dataClub2;
+        localStorage.setItem('club', JSON.stringify(dataClub));
     }
 };
 

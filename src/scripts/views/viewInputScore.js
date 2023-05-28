@@ -1,3 +1,4 @@
+import InputSingleScore from '../utils/inputSingleScore.js';
 import { createInputScoreSingle, createInputScoreMultiple } from '../components/componentInputScore.js';
 
 const ViewInputScore = {
@@ -46,7 +47,15 @@ const ViewInputScore = {
         element.innerHTML = createInputScoreMultiple();
     },
 
-    _eventInputSingle() {},
+    _eventInputSingle() {
+        InputSingleScore.init({
+            club1: document.querySelector('#club-name-1'),
+            club2: document.querySelector('#club-name-2'),
+            score1: document.querySelector('#club-score-1'),
+            score2: document.querySelector('#club-score-2'),
+            button: document.querySelector('#single-submit'),
+        });
+    },
 };
 
 export default ViewInputScore;
