@@ -84,8 +84,6 @@ const InputSingleScore = {
         const updateData2 = getClub[indexClub2];
 
         // update data club berdasarkan input score
-        updateData1.ma++;
-        updateData2.ma++;
         updateData1.gm = updateData1.gm + data.score1;
         updateData1.gk = updateData1.gk + data.score2;
         updateData2.gm = updateData2.gm + data.score2;

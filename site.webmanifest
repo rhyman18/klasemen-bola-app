@@ -1,9 +1,9 @@
 {
-    "id": "my-league-app",
+    "id": "my-liga-app",
     "start_url":"./index.html",
-    "name": "My League App",
+    "name": "My Liga App",
     "description":"Aplikasi pengatur klasemen liga sepak bola favorit anda",
-    "short_name": "League App",
+    "short_name": "Liga App",
     "icons": [
         {
             "src": "src/icons/android-chrome-192x192.png",

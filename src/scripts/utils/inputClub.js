@@ -19,7 +19,6 @@ const InputClub = {
                 const dataInput = {
                     name: this._name.value.toLowerCase(),
                     town: this._town.value.toLowerCase(),
-                    ma: 0,
                     me: 0,
                     s: 0,
                     k: 0,

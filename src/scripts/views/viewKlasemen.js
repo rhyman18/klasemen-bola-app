@@ -6,7 +6,7 @@ const ViewKlasemen = {
         return `
         <div class="h-screen max-w-screen-lg flex justify-center items-center mx-4 lg:mx-auto">
             <div class="grow bg-blue-800 border-4 border-blue-400 rounded-xl px-6">
-                <h1 class="text-3xl font-bold text-blue-300 text-center mt-9">Klasemen</h1>
+                <h1 class="text-3xl font-bold text-blue-300 text-center mt-9">Klasemen Liga App</h1>
                 <table class="mt-12 table-auto text-blue-200 text-lg text-center w-full">
                     <thead>
                         <tr>
